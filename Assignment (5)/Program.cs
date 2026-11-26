@@ -73,10 +73,15 @@ namespace Assignment__5_
             // price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
             // with the title "Clean Code" and print the returned price.
 
-            double price;
-            bool result = TryGetPrice("Clean Code", out price);
-            Console.WriteLine(result);
-            Console.WriteLine(price);
+            ///double price;
+            ///bool result = TryGetPrice("Clean Code", out price);
+            ///Console.WriteLine(result);
+            ///Console.WriteLine(price);
+            #endregion
+
+            #region Question 10
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("C# Programming", 450);
             #endregion
         }
         ///static void PrintWelcomeMessage()
@@ -114,16 +119,22 @@ namespace Assignment__5_
         ///}
         ///
 
-        static bool TryGetPrice(string title, out double price)
-        {
-            if (title == "Clean Code")
-            {
-                price = 25.5;
-                return true;
-            }
+        ///static bool TryGetPrice(string title, out double price)
+        ///{
+        ///    if (title == "Clean Code")
+        ///    {
+        ///        price = 25.5;
+        ///        return true;
+        ///    }
+        ///
+        ///    price = 0;
+        ///    return false;
+        ///}
+        ///
 
-            price = 0;
-            return false;
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine("Book: " + title + ", Pages: " + pages);
         }
     }
 }
