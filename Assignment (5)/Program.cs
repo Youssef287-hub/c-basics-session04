@@ -1,4 +1,6 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Diagnostics;
+using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment__5_
 {
@@ -53,9 +55,17 @@ namespace Assignment__5_
 
             #region Question 7
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.Call it and print pages afterward. How is the result different from question 5 ?
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
+            ///AddBonusPagesByRef(ref pages);
+            ///Console.WriteLine(pages);
 
+            #endregion
+
+            #region Question 8
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward.
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
             #endregion
         }
         ///static void PrintWelcomeMessage()
@@ -82,10 +92,14 @@ namespace Assignment__5_
         ///}
         ///
 
-        public static void AddBonusPagesByRef(ref int pages)
-        {
-            pages += 50;
-        }
+        ///public static void AddBonusPagesByRef(ref int pages)
+        ///{
+        ///    pages += 50;
+        ///}
 
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+        }
     }
 }
