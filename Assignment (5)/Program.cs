@@ -85,7 +85,11 @@ namespace Assignment__5_
             #endregion
 
             #region Question 11
-            PrintBookInfo(pages: 500, title: "Java Programming");
+            ///PrintBookInfo(pages: 500, title: "Java Programming");
+            #endregion
+
+            #region Question 12
+            PrintAllTitles("Clean Code", "C# Programming", "Java Programming");
             #endregion
         }
         ///static void PrintWelcomeMessage()
@@ -136,9 +140,18 @@ namespace Assignment__5_
         ///}
         ///
 
-        static void PrintBookInfo(string title, int pages = 300)
+        ///static void PrintBookInfo(string title, int pages = 300)
+        ///{
+        ///    Console.WriteLine("Book: " + title + ", Pages: " + pages);
+        ///}
+        ///
+
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine("Book: " + title + ", Pages: " + pages);
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
