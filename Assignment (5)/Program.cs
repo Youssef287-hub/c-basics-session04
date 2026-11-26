@@ -30,7 +30,13 @@ namespace Assignment__5_
             #endregion
 
             #region Question 4
-            PrintBookTitle("Clean Code");
+            ///PrintBookTitle("Clean Code");
+            #endregion
+
+            #region Question 5
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
             #endregion
         }
         ///static void PrintWelcomeMessage()
@@ -39,9 +45,15 @@ namespace Assignment__5_
         ///}
         ///
 
-        static void PrintBookTitle(string title)
+        ///static void PrintBookTitle(string title)
+        ///{
+        ///    Console.WriteLine("Book title: " + title);
+        ///}
+        ///
+
+        static void AddBonusPages(int pages)
         {
-            Console.WriteLine("Book title: " + title);
+            pages += 50;
         }
     }
 }
